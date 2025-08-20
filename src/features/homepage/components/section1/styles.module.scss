@@ -1,0 +1,65 @@
+.heroSection {
+  position: relative;
+  height: 737px;
+  background: url("/assets/homepage/section1.jpg") no-repeat center / cover;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  width: 818px;
+  height: 228px;
+  gap: 24px;
+  text-align: center;
+  display: grid;
+  justify-items: center;
+}
+
+.text1 {
+  color: white;
+  font-size: 48px;
+  font-weight: 900;
+}
+
+.decorative_span {
+  position: relative;
+  display: inline-block;
+}
+
+.decorative_text {
+  position: relative;
+  z-index: 2;
+  color: #3aa5a8;
+}
+
+.decorative_line {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.text2 {
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  width: 657px;
+}
+.btn {
+  width: 344px;
+  height: 49px;
+}

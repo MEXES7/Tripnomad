@@ -1,0 +1,87 @@
+.secondSection {
+  background-color: #ffffff;
+  // height: 737px;
+  display: flex;
+  margin: 50px 60px;
+  // padding-left: 60px;
+  // padding-right: 60px;
+  padding: 10rem;
+  gap: 32px;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.texts {
+  width: 464px;
+  display: grid;
+  height: 641px;
+  padding: 40px 0px;
+}
+
+.text1 {
+  color: #e0b700;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.text2 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.text3 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #8f8e8e;
+  margin: 10px 0;
+}
+
+.steps {
+  display: grid;
+  gap: 20px;
+}
+
+.step {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.header {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.body {
+  font-size: 16px;
+  font-weight: 400;
+  color: #8f8e8e;
+}
+
+.imagesContainer {
+  display: grid;
+  height: 680px;
+  gap: 12px;
+}
+
+.images {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.customRadius1 {
+  border-top-right-radius: 80px;
+  border-bottom-left-radius: 80px;
+  height: 334px;
+  object-fit: cover;
+}
+
+.customRadius2 {
+  border-top-left-radius: 80px;
+  height: 334px;
+  border-bottom-right-radius: 80px;
+  object-fit: cover;
+}

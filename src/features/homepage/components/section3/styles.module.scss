@@ -1,0 +1,168 @@
+.section3 {
+  position: relative;
+  height: 737px;
+  background: url("/assets/homepage/section3/thailand.jpg") no-repeat center /
+    cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  gap: 24px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  margin-left: 144px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.textSection {
+  margin-left: 117px !important;
+  top: 248px;
+  display: grid;
+  gap: 12px;
+}
+
+.headerText {
+  color: #f3ca15;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: start;
+}
+
+.textContainer {
+  text-align: start;
+  margin-bottom: 20px;
+  height: 140px; // Fixed height to prevent layout shift
+  width: 484px;
+
+  .slideText {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    color: white;
+    font-size: 64px;
+    font-weight: 600;
+    // Animation will be triggered by index change
+    animation: slideUpText 0.5s ease-out;
+  }
+}
+
+@keyframes slideUpText {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// Optional: If you want to add a class dynamically for more control
+.textContainer.animate {
+  .slideText {
+    animation: slideUpTextSmooth 0.6s ease-out;
+  }
+}
+
+@keyframes slideUpTextSmooth {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.details {
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+}
+
+.button {
+  width: 205px;
+  height: 49px;
+}
+
+.sliderContainer {
+  // width: 960px;
+  overflow: hidden;
+  // top: 20px;
+  // left: 222px !important;
+  position: relative;
+}
+
+.slider {
+  position: relative;
+  width: 900px;
+  height: 528px;
+  overflow: hidden;
+}
+
+.slidesWrapper {
+  display: flex;
+  gap: 38;
+  width: 960px;
+  height: 400px;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide {
+  position: relative;
+  height: 528px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:not(.large) {
+    width: 335px;
+    .image {
+      width: 335px !important;
+      height: 453px !important;
+      position: relative !important;
+    }
+  }
+
+  &.large {
+    width: 335px;
+    .image {
+      width: 335px !important;
+      height: 528x !important;
+      position: relative !important;
+    }
+  }
+}
+
+.image {
+  object-fit: cover;
+  border-radius: 8px;
+  transition: all 0.6s ease;
+}

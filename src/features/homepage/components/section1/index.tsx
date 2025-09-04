@@ -4,6 +4,7 @@ import React from "react";
 import styles from "./styles.module.scss";
 import Button from "@/components/btn";
 import { useModalStore } from "@/store/modalStore";
+import { Line } from "@/components/icons/icons";
 
 // import Image from "next/image";
 
@@ -23,19 +24,12 @@ const Section1 = () => {
           Explore the{" "}
           <div className={styles.decorative_span}>
             <span className={styles.decorative_text}>World</span>
-            <img
-              src="/assets/homepage/line 1.png"
-              className={styles.decorative_line}
-            />
+            <Line className={styles.decorative_line} />
           </div>{" "}
           with{" "}
           <div className={styles.decorative_span}>
             <span className={styles.decorative_text}>Budget</span>
-            <img
-              src="/assets/homepage/line 1.png"
-              className={styles.decorative_line}
-              alt="line"
-            />
+            <Line className={styles.decorative_line} />
           </div>{" "}
           Friendly Travel Options
         </h1>

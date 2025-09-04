@@ -9,6 +9,7 @@ import {
 } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import clsx from "clsx";
+import { Checked, NotChecked } from "../icons/icons";
 
 export type Country = {
   name: string;
@@ -185,7 +186,7 @@ export default function CountrySelector(props: Props) {
                         >
                           {" "}
                           {/* ✅ Custom Checkbox Icon */}
-                          <Image
+                          {/* <Image
                             src={
                               isSelected
                                 ? "/assets/checkboxFilled.svg"
@@ -195,13 +196,12 @@ export default function CountrySelector(props: Props) {
                             height={12}
                             alt="check icon"
                             className="w-5 h-5"
-                          />
-                          <Image
+                          /> */}
+                          {isSelected ? <Checked /> : <NotChecked />}
+                          <img
                             src={opt.flag}
-                            alt=""
-                            width={16}
-                            height={16}
-                            className="rounded-full size-[1.6rem] border-[0.1rem]"
+                            alt="opt"
+                            className="w-[1.6rem] h-[1.6rem] rounded-full size-[1.6rem] border-[0.1rem]"
                           />
                           <span className="text-[#6E6E6E] font-opensans text-[1.6rem]">
                             {opt.name}

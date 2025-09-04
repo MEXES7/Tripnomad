@@ -32,7 +32,7 @@ const Header = () => {
             <div className="flex items-center gap-[0.6rem] border-[0.1rem] rounded-[1rem] border-[#DFDFDF] text-[1.4rem] text-[#5D5D5D] p-[0.5rem] font-opensans w-[26.1rem] h-[3.5rem] py-[0.8rem] px-[1.2rem] shadow-md">
               Passport:{" "}
               <div className="flex gap-[1rem]">
-                {formData.passport.map((img) => (
+                {formData.passport.slice(0, 2).map((img) => (
                   <div
                     key={img.name}
                     className="flex gap-[0.4rem] items-center"

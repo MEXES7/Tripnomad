@@ -6,6 +6,58 @@ interface Props {
   onClick?: () => void;
 }
 
+export const Line: React.FC<Props> = ({ className }) => (
+  <svg
+    className={className}
+    width="160"
+    height="17"
+    viewBox="0 0 160 17"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M2.21951 1.38778C15.7225 25.9622 157.504 -16.4758 158.469 16.3172"
+      stroke="#3AA5A8"
+      stroke-width="3"
+    />
+  </svg>
+);
+
+export const NotChecked: React.FC<Props> = ({ className }) => (
+  <svg
+    className={className}
+    width="14"
+    height="14"
+    viewBox="0 0 14 14"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M1.66699 3.80046V10.2005C1.66699 10.9472 1.66699 11.3204 1.81232 11.6056C1.94015 11.8565 2.14397 12.0607 2.39486 12.1885C2.67979 12.3337 3.05299 12.3337 3.79827 12.3337H10.2024C10.9477 12.3337 11.3203 12.3337 11.6053 12.1885C11.8561 12.0607 12.0607 11.8565 12.1885 11.6056C12.3337 11.3207 12.3337 10.948 12.3337 10.2027V3.79827C12.3337 3.05299 12.3337 2.67979 12.1885 2.39486C12.0607 2.14397 11.8561 1.94015 11.6053 1.81232C11.3201 1.66699 10.9472 1.66699 10.2005 1.66699H3.80046C3.05372 1.66699 2.68007 1.66699 2.39486 1.81232C2.14397 1.94015 1.94015 2.14397 1.81232 2.39486C1.66699 2.68007 1.66699 3.05372 1.66699 3.80046Z"
+      stroke="#8E8E8E"
+      stroke-width="1.66667"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
+
+export const Checked: React.FC<Props> = ({ className }) => (
+  <svg
+    className={className}
+    width="16"
+    height="16"
+    viewBox="0 0 16 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M12.6667 2H3.33333C2.59333 2 2 2.6 2 3.33333V12.6667C2 13.4 2.59333 14 3.33333 14H12.6667C13.4067 14 14 13.4 14 12.6667V3.33333C14 2.6 13.4067 2 12.6667 2ZM6.66667 11.3333L3.33333 8L4.27333 7.06L6.66667 9.44667L11.7267 4.38667L12.6667 5.33333L6.66667 11.3333Z"
+      fill="black"
+    />
+  </svg>
+);
+
 export const CloseIcon: React.FC<Props> = ({ className }) => (
   <svg
     className={className}

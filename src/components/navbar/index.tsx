@@ -7,7 +7,9 @@ import Link from "next/link";
 const Navbar = () => {
   return (
     <nav className={styles.navbar}>
-      <Image src="/assets/logo.svg" alt="logo" width={165} height={98} />
+      <Link href="/">
+        <Image src="/assets/logo.svg" alt="logo" width={165} height={98} />
+      </Link>
       <div className={`font-inter ${styles.navLinks}`}>
         <Link href="/">How its works</Link>
         <Link href="/">Testimonial</Link>

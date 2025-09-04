@@ -34,13 +34,12 @@ const Section2 = () => {
     <section className={styles.secondSection}>
       <div className={styles.texts}>
         <div className={styles.header}>
-          <p className={styles.text1}>How it’s works?</p>
-          <h1 className={styles.text2}>
-            Plan your trip in 3 <br />
-            simple steps
+          <p className={`font-urbanist ${styles.text1}`}>How it’s works?</p>
+          <h1 className={`font-montserrat ${styles.text2}`}>
+            Plan your trip in 3 simple steps
           </h1>
-          <p className={styles.text3}>
-            We simplify travel by finding visa-friendly <br /> destinations and
+          <p className={`font-urbanist ${styles.text3}`}>
+            We simplify travel by finding visa-friendly destinations and
             ready-to-go trip bundles instantly.
           </p>
         </div>
@@ -49,8 +48,10 @@ const Section2 = () => {
             <div key={index} className={styles.step}>
               <img src={step.img} />{" "}
               <span>
-                <h4 className={styles.header}>{step.header}</h4>
-                <p className={styles.body}>{step.body}</p>
+                <h4 className={`font-opensans ${styles.header}`}>
+                  {step.header}
+                </h4>
+                <p className={` font-opensans ${styles.body}`}>{step.body}</p>
               </span>
             </div>
           ))}

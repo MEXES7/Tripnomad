@@ -7,12 +7,19 @@ import {
 } from "@/components/icons/icons";
 import { useTripStore } from "@/store/tripStore";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const TravelCard = () => {
   const { travels, setSelected } = useTripStore();
+  const router = useRouter();
+
+  const handleSubmit = (id: number) => {
+    setSelected(id);
+    router.push("/travel");
+  };
   return (
-    <div className="bg-[#F8F8F8]">
+    <div className="bg-[#F8F8F8] overflow-y-auto">
       <div className="flex flex-col gap-[2rem]  justify-center px-[6rem] pt-[2rem] overflow-y-auto max-w-[1440px] mx-auto">
         <div className="flex items-start gap-[1.2rem] ">
           <LocationIcon />
@@ -104,7 +111,7 @@ const TravelCard = () => {
                 </div>
               </div>
               <button
-                onClick={() => setSelected(item.id)}
+                onClick={() => handleSubmit(item.id)}
                 className="font-semibold font-urbanist text-[1.4rem] text-[#ffffff] py-[1.2rem] px-[4.8rem] bg-[#3AA5A8] w-full h-[4.9rem] rounded-[0.4rem]"
               >
                 View Details

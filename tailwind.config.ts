@@ -25,6 +25,8 @@ export default {
         opensans: ['"Open Sans"', "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
         urbanist: ["Urbanist", "sans-serif"],
+        rocker: ["New Rocker", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
       },
     },
   },

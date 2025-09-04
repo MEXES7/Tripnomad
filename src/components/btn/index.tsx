@@ -18,7 +18,7 @@ const Button = ({
   const radiusClass = rounded ? styles.rounded : styles.square;
   return (
     <button
-      className={`${styles.btn} ${radiusClass} ${className}`}
+      className={`font-urbanist ${styles.btn} ${radiusClass} ${className}`}
       onClick={onClick}
     >
       {Label}

@@ -103,15 +103,21 @@ const PlanTrip = () => {
                 What is your total trip budget range*
               </label>
               <div className="flex-col items-center space-y-[4px]">
-                <input
-                  type="number"
-                  placeholder="$00.00"
-                  value={value}
-                  onChange={handleBudgetChange}
-                  className="w-full h-[5.5rem] bg-[#f8f8f8] border-[1px] border-[#8E8E8E] rounded-md text-start font-opensans text-[1.6rem] text-[#211408] placeholder-[#DBDBDB]
-                  appearance-none [&::-webkit-inner-spin-button]:appearance-none 
-                  [&::-webkit-outer-spin-button]:appearance-none"
-                />
+                <div className="relative w-full">
+                  <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[1.6rem] text-[] font-opensans">
+                    $
+                  </span>
+                  <input
+                    type="number"
+                    placeholder="00.00"
+                    value={value}
+                    onChange={handleBudgetChange}
+                    className="w-full h-[5.5rem] bg-[#f8f8f8] border-[1px] border-[#8E8E8E] rounded-md text-start py-[1.6rem] pl-[2rem] pr-[1.2rem] font-opensans text-[1.6rem] text-[#211408] placeholder-[#DBDBDB]
+        appearance-none [&::-webkit-inner-spin-button]:appearance-none 
+        [&::-webkit-outer-spin-button]:appearance-none"
+                  />
+                </div>
+
                 <input
                   type="range"
                   min={0}
@@ -188,7 +194,7 @@ const PlanTrip = () => {
               <DatePicker
                 width="w-[65rem]"
                 height="py-[5.5rem]"
-                dropdownHeight="h-[5.5rem]"
+                dropdownHeight="h-[25rem]"
                 dropdownWidth="w-[63rem]"
                 initialDeparture={
                   formData.dateRange.start

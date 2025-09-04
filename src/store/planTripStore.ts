@@ -100,44 +100,7 @@ export const useFormStore = create<FormStore>()(
           },
         },
       }),
-      storage: createJSONStorage(() => localStorage),
-      //   serialize: (state: {
-      //     formData: {
-      //       dateRange: {
-      //         start: { toISOString: () => any };
-      //         end: { toISOString: () => any };
-      //       };
-      //     };
-      //   }) => {
-      //     const serialized = {
-      //       ...state,
-      //       formData: {
-      //         ...state.formData,
-      //         dateRange: {
-      //           start: state.formData.dateRange.start?.toISOString() || null,
-      //           end: state.formData.dateRange.end?.toISOString() || null,
-      //         },
-      //       },
-      //     };
-      //     return JSON.stringify(serialized);
-      //   },
-      //   deserialize: (str: string) => {
-      //     const parsed = JSON.parse(str);
-      //     return {
-      //       ...parsed,
-      //       formData: {
-      //         ...parsed.formData,
-      //         dateRange: {
-      //           start: parsed.formData.dateRange.start
-      //             ? new Date(parsed.formDate.dateRange.start)
-      //             : null, // Fix typo here
-      //           end: parsed.formData.dateRange.end
-      //             ? new Date(parsed.formData.dateRange.end)
-      //             : null,
-      //         },
-      //       },
-      //     };
-      //   },
+      storage: createJSONStorage(() => sessionStorage),
     }
   )
 );

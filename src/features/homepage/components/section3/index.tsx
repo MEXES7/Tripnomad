@@ -65,12 +65,14 @@ const Section3 = () => {
       <div className={styles.content}>
         {/* Text display area - changes with the slider */}
         <div className={styles.textSection}>
-          <p className={styles.headerText}>Popular Destinations</p>
+          <p className={`font-urbanist ${styles.headerText}`}>
+            Popular Destinations
+          </p>
           <div className={styles.textContainer}>
             {" "}
             <h2
               key={index} // This forces re-render and animation restart
-              className={styles.slideText}
+              className={`font-montserrat ${styles.slideText}`}
               // style={{
               //   transition: isTransitioning
               //     ? "transform 0.5s ease-in-out"
@@ -79,7 +81,7 @@ const Section3 = () => {
             >
               {extendedSlides[index].text}
             </h2>
-            <p className={styles.details}>
+            <p className={`font-urbanist ${styles.details}`}>
               Plan, book and embark on your dream adventures with our expert
               guidance and tailored experience.
             </p>

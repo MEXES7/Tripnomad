@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState, useRef, useEffect } from "react";
 import { ChevronLeft, ChevronRight, ChevronDown } from "lucide-react";
 
@@ -52,6 +53,26 @@ export const formatDate = (date: Date | null): string => {
   const month = months[date.getMonth()].substring(0, 3);
   const year = date.getFullYear();
   return `${dayName}, ${day} ${month} ${year}`;
+};
+
+export const formatDate2 = (date: Date | string | null | undefined): string => {
+  if (!date) return "";
+
+  // ensure we always end up with a Date object
+  const d = typeof date === "string" ? new Date(date) : date;
+
+  if (!(d instanceof Date) || isNaN(d.getTime())) return "";
+
+  // const months = [
+  //   "January", "February", "March", "April", "May", "June",
+  //   "July", "August", "September", "October", "November", "December",
+  // ];
+
+  const day = d.getDate().toString().padStart(2, "0");
+  const month = months[d.getMonth()].substring(0, 3);
+  const year = d.getFullYear();
+
+  return `${month} ${day} ${year}`;
 };
 
 const DatePicker: React.FC<DatePickerProps> = ({
@@ -290,7 +311,7 @@ const DatePicker: React.FC<DatePickerProps> = ({
       return `${formatDate(departureDate)} - Return date`;
     } else {
       return (
-        <div className="flex items-center gap-1  font-opensans px-2 py-1 text-[1rem] font-[400] text-[#DBDBDB]">
+        <div className="flex items-center gap-1  font-opensans px-2 py-1 text-[1.6rem] font-[400] text-[#DBDBDB]">
           Select date
         </div>
       );

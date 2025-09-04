@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <Image src="/assets/logo.svg" alt="logo" width={165} height={98} />
-      <div className={styles.navLinks}>
+      <div className={`font-inter ${styles.navLinks}`}>
         <Link href="/">How its works</Link>
         <Link href="/">Testimonial</Link>
         <Link href="/">Popular Trips</Link>

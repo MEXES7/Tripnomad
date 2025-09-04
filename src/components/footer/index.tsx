@@ -25,13 +25,18 @@ const Footer = () => {
         <div className={styles.overlay} />
         <div className={styles.content}>
           <div className={styles.text}>
-            <p className={styles.text1}>Let’s embark on your next adventure </p>
-            <p className={styles.text2}>
+            <p className={`font-opensans ${styles.text1}`}>
+              Let’s embark on your next adventure{" "}
+            </p>
+            <p className={`font-montserrat ${styles.text2}`}>
               Get exclusive offers <br /> delivered to your inbox!
             </p>
           </div>
           <div className={styles.inputField}>
-            <input placeholder="Enter your Email" className={styles.input} />
+            <input
+              placeholder="Enter your Email"
+              className={`font-opensans ${styles.input}`}
+            />
             <div className={styles.btn}>
               <Button rounded Label={"Subscribe"} onClick={handleClick} />
             </div>
@@ -50,11 +55,11 @@ const Footer = () => {
                   height={26}
                   className={styles.travelly}
                 />
-                <p className={styles.menuItem1}>
+                <p className={`font-opensans ${styles.menuItem1}`}>
                   Travelly 2025, All right reserved
                 </p>
               </div>
-              <div className={styles.menus}>
+              <div className={`font-opensans ${styles.menus}`}>
                 <div className={styles.menu}>
                   {" "}
                   <Link href="/" className={styles.menuItem1}>

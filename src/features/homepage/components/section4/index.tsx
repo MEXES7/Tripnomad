@@ -88,11 +88,18 @@ const Section4 = () => {
   return (
     <section className={styles.finalSection}>
       <div className={styles.reviews}>
-        <p className={styles.review}>Reviews</p>
-        <p className={styles.header}>What our people says about Travelly</p>
+        <p className={`font-urbanist ${styles.review}`}>Reviews</p>
+        <p className={styles.header}>
+          What our people says about{" "}
+          <span className="font-rocker font-normal text-[#3AA5A8]">
+            TRAVELLY
+          </span>
+        </p>
         <div key={reviews[current].id}>
-          <p className={styles.content}>“{reviews[current].review}“</p>
-          <p className={styles.name}>
+          <p className={`font-opensans ${styles.content}`}>
+            “{reviews[current].review}“
+          </p>
+          <p className={`font-opensans ${styles.name}`}>
             _ {reviews[current].user}, {reviews[current].country}
           </p>
         </div>

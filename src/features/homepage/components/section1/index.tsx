@@ -19,7 +19,7 @@ const Section1 = () => {
       <div className={styles.overlay} />
 
       <div className={styles.content}>
-        <h1 className={styles.text1}>
+        <h1 className="font-[900] font-montserrat text-white text-[4.8rem]">
           Explore the{" "}
           <div className={styles.decorative_span}>
             <span className={styles.decorative_text}>World</span>
@@ -40,7 +40,7 @@ const Section1 = () => {
           Friendly Travel Options
         </h1>
         <div className={styles.content2}>
-          <p className={styles.text2}>
+          <p className="font-urbanist text-white text-[2rem] w-[65.7rem] ">
             Get personalized travel bundles based on your budget, passport, and
             travel dates in second. We will find affordable, visa-friendly trips
             tailored just for you.
